@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Siddique Ansari <Siddique>",
   "license": "ISC",
   "description": "",
   "dependencies": {
@@ -14,5 +15,6 @@
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "mongoose": "^8.9.1"
-  }
+  },
+  "repository": "https://siddique-ansari3@github.com/siddique-ansari3/salah-time-backend.git"
 }
