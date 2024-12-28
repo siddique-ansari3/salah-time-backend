@@ -1,17 +1,21 @@
 const mongoose = require('mongoose');
 
+const LocalizedStringSchema = new mongoose.Schema({
+  en: { type: String, required: true },
+  ur: { type: String, required: true }
+});
+
 const MosqueSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  name_urdu: { type: String, required: true },
-  location: { type: String, required: true },
+  name: LocalizedStringSchema,
+  location: LocalizedStringSchema,
   timings: {
-    fajr: { type: String, required: true },
-    dhuhr: { type: String, required: true },
-    asr: { type: String, required: true },
-    maghrib: { type: String, required: true },
-    isha: { type: String, required: true },
-    juma: { type: String, required: true },
-  },
+    fajr: LocalizedStringSchema,
+    dhuhr: LocalizedStringSchema,
+    asr: LocalizedStringSchema,
+    maghrib: LocalizedStringSchema,
+    isha: LocalizedStringSchema,
+    juma: LocalizedStringSchema
+  }
 });
 
 module.exports = mongoose.model('Mosque', MosqueSchema);
