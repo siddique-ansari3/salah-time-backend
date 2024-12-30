@@ -12,12 +12,6 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use(cors({
-  origin: 'http://localhost:4200',  // Angular frontend URL
-  methods: ['POST', 'GET', 'PUT', 'DELETE'],
-  credentials: true
-}));
-
 // Database Connection
 mongoose.connect('mongodb+srv://siddiqueansari3:2JBasf71N8AJelGF@salahtime.nvzok.mongodb.net/?retryWrites=true&w=majority&appName=salahtime', {
     useUnifiedTopology: true,
