@@ -58,7 +58,7 @@ router.get('/user', async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
-    res.json({ email: user.email, userId: user._id });
+    res.json({ email: user.email, userId: user._id, name: user.name});
   } catch (error) {
     res.status(401).json({ message: 'Invalid or expired token' });
   }
